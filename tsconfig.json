@@ -1,7 +1,27 @@
 {
-  "extends": "./tsconfig.build.json",
+  "extends": "./tsconfig.base.json",
+  "include": [
+    "src/ui4u-*/src",
+    "./types",
+    "./docs/src",
+    "./scripts",
+    "./configuration",
+    "./configuration/types",
+    "./tests"
+  ],
+  "exclude": [
+    "public",
+    ".cache",
+    "configuration/jest",
+    "configuration/storybook/main.js",
+    "node_modules",
+    "src/ui4u-*/esm/**/*",
+    "src/ui4u-*/lib/**/*",
+    "src/ui4u-*/cjs/**/*"
+  ],
   "compilerOptions": {
-    "baseUrl": "./"
-  },
-  "include": ["./packages/*/**.ts"]
+    "paths": {
+      "@ui4u/*": ["src/ui4u-*/src"]
+    }
+  }
 }

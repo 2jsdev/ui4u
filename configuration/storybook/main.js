@@ -1,7 +1,15 @@
 const path = require('path');
+const { argv } = require('yargs');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin').default;
 
-const storiesPath = path.resolve(__dirname, '../../packages/**/*.story.@(ts|tsx)').replace(/\\/g, '/')
+const storiesPath = !argv._[0]
+  ? path.resolve(__dirname, '../../src/**/*.story.@(ts|tsx)').replace(/\\/g, '/')
+  : path
+      .resolve(
+        __dirname,
+        `../../src/ui4u-${argv._[0].replace('@ui4u/', '')}/**/*.story.@(ts|tsx)`
+      )
+      .replace(/\\/g, '/');
 
 module.exports = {
   stories: [storiesPath],
@@ -18,6 +26,7 @@ module.exports = {
       ],
     };
 
+    // Turn off docgen plugin as it breaks bundle with displayName
     config.plugins.pop();
 
     return config;
