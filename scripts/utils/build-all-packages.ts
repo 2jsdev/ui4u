@@ -1,9 +1,12 @@
+/* eslint-disable no-await-in-loop, no-restricted-syntax */
+
 import { buildPackage, BuildOptions } from './build-package';
 import { getPackagesBuildOrder } from './get-packages-build-order';
 
 export async function buildAllPackages(options?: BuildOptions) {
   const packages = await getPackagesBuildOrder();
 
+  // eslint-disable-next-line no-param-reassign
   options = options || {
     analyze: false,
     sourcemap: true,

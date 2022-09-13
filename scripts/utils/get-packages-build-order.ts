@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign, no-restricted-syntax, no-continue, no-await-in-loop */
 import { getPackagesList, Package } from './get-packages-list';
 
 export async function getPackageBuildOrder(
@@ -19,7 +20,7 @@ export async function getPackageBuildOrder(
     ...pkg.packageJson.peerDependencies,
     ...pkg.packageJson.dependencies,
   })
-    .filter((dependency) => dependency.includes('@ui4u/'))
+    .filter((dependency) => dependency.includes('@2jsdev/'))
     .map((dependency) => packages.find((pkgItem) => pkgItem.packageJson.name === dependency));
 
   if (dependencies.length === 0) {

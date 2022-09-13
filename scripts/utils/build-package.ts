@@ -1,3 +1,4 @@
+/* eslint-disable no-await-in-loop, no-restricted-syntax */
 import chalk from 'chalk';
 import createPackageConfig from '../../configuration/rollup/create-package-config';
 import locatePackage from './locate-package';

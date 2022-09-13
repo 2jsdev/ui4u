@@ -27,7 +27,7 @@ export default async function createPackageConfig(config: PkgConfigInput): Promi
     fs.readFileSync(path.join(config.basePath, './package.json')).toString('utf-8')
   );
   const pkgList = await getPackagesList();
-  
+
   const aliasEntries: Alias[] = pkgList.map((pkg) => ({
     find: new RegExp(`^${pkg.packageJson.name}`),
     replacement: path.resolve(pkg.path, 'src'),
@@ -122,7 +122,7 @@ export default async function createPackageConfig(config: PkgConfigInput): Promi
       })
     );
   }
-  
+
   return {
     input: config?.entry || path.resolve(config.basePath, 'src/index.ts'),
     output,

@@ -1,9 +1,8 @@
 {
   "extends": "./tsconfig.base.json",
   "include": [
-    "src/ui4u-*/src",
+    "src/2jsdev-*/src",
     "./types",
-    "./docs/src",
     "./scripts",
     "./configuration",
     "./configuration/types",
@@ -15,13 +14,13 @@
     "configuration/jest",
     "configuration/storybook/main.js",
     "node_modules",
-    "src/ui4u-*/esm/**/*",
-    "src/ui4u-*/lib/**/*",
-    "src/ui4u-*/cjs/**/*"
+    "src/2jsdev-*/esm/**/*",
+    "src/2jsdev-*/lib/**/*",
+    "src/2jsdev-*/cjs/**/*"
   ],
   "compilerOptions": {
     "paths": {
-      "@ui4u/*": ["src/ui4u-*/src"]
+      "@2jsdev/*": ["src/2jsdev-*/src"]
     }
   }
 }

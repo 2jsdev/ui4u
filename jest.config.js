@@ -1,14 +1,12 @@
 module.exports = {
-  testEnvironment: "jest-environment-jsdom",
-  collectCoverage: true,
-  coverageDirectory: "coverage",
+  testEnvironment: 'jest-environment-jsdom',
   transform: {
-    "^.+\\.tsx?$": "@sucrase/jest-plugin",
+    '\\.(js|jsx|ts|tsx)$': '@sucrase/jest-plugin',
   },
-  testMatch: ["**/__tests__/**/*.ts?(x)", "**/?(*.)+(spec|test).ts?(x)"],
-  setupFilesAfterEnv: ["./configuration/jest/jsdom.mocks.js"],
-  coveragePathIgnorePatterns: ["jest.config.js", "/node_modules/", "/dist/"],
+  testMatch: ['**/?(*.)+(spec|test).ts?(x)', '**/__tests__/**/*.ts?(x)'],
+  setupFilesAfterEnv: ['./configuration/jest/jsdom.mocks.js'],
+  transformIgnorePatterns: ['<rootDir>/node_modules/'],
   moduleNameMapper: {
-    "^@2jsdev/(.*)$": "<rootDir>/packages/$1/",
+    '@2jsdev/(.*)': '<rootDir>/src/2jsdev-$1/src',
   },
 };

@@ -7,7 +7,7 @@ const storiesPath = !argv._[0]
   : path
       .resolve(
         __dirname,
-        `../../src/ui4u-${argv._[0].replace('@ui4u/', '')}/**/*.story.@(ts|tsx)`
+        `../../src/2jsdev-${argv._[0].replace('@2jsdev/', '')}/**/*.story.@(ts|tsx)`
       )
       .replace(/\\/g, '/');
 
