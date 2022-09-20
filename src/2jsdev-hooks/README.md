@@ -2,7 +2,7 @@
 
 A set of react hooks for state and UI management
 
-[View documentation](https://2jsdev.dev/)
+[View documentation](https://ui4u.dev/)
 
 ## Installation
 
