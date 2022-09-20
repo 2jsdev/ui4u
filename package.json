@@ -32,7 +32,7 @@
     "release:major": "npm run _release major"
   },
   "resolutions": {
-    "@types/react": "18.0.19"
+    "@types/react": "18.0.9"
   },
   "dependencies": {
     "@emotion/react": "11.9.3",
