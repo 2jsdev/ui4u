@@ -4,7 +4,7 @@
   "workspaces": [
     "./src/*"
   ],
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "2jsdev Components Monorepo",
   "main": "index.js",
   "repository": "https://github.com/2jsdev/ui4u.git",
